@@ -1,0 +1,146 @@
+{
+  "framework_id": "sccs",
+  "framework_name": "EU Standard Contractual Clauses (June 2021)",
+  "version": "1.0",
+  "requirements": [
+    {
+      "id": "scc_module",
+      "name": "Applicable Module Identified",
+      "article_reference": "SCC Clause 1, Annex I.A",
+      "description": "The DPA must identify which SCC module applies: Module 1 (controller-to-controller), Module 2 (controller-to-processor), Module 3 (processor-to-processor), or Module 4 (processor-to-controller).",
+      "expected_provisions": [
+        "Applicable SCC module explicitly identified",
+        "Roles of the parties (exporter/importer, controller/processor) specified",
+        "SCCs incorporated by reference or appended in full"
+      ],
+      "severity": "critical",
+      "category": "structure"
+    },
+    {
+      "id": "scc_purpose_limitation",
+      "name": "Purpose Limitation and Instructions",
+      "article_reference": "SCC Clause 8.1 (Module 2), Clause 8.2 (Module 3)",
+      "description": "The data importer shall process personal data only on documented instructions from the data exporter, and only for the specific purposes of the transfer as set out in Annex I.B.",
+      "expected_provisions": [
+        "Processing only on documented instructions from exporter",
+        "Specific purposes of transfer described in Annex I.B or equivalent schedule",
+        "Importer informs exporter if unable to follow instructions"
+      ],
+      "severity": "critical",
+      "category": "processing_instructions"
+    },
+    {
+      "id": "scc_annex_i",
+      "name": "Annex I — Parties, Transfer Details, Competent Authority",
+      "article_reference": "SCC Annex I (Parts A, B, C)",
+      "description": "Annex I must identify the parties (I.A), describe the transfer (I.B — categories of data subjects, personal data, sensitive data, frequency, nature, purpose, retention period), and identify the competent supervisory authority (I.C).",
+      "expected_provisions": [
+        "Parties identified with name, address, contact, activities, role",
+        "Categories of data subjects described",
+        "Categories of personal data transferred described",
+        "Sensitive data identified (if applicable) with restrictions",
+        "Frequency and nature of processing described",
+        "Purpose of transfer stated",
+        "Retention period or criteria for determining retention",
+        "Competent supervisory authority identified"
+      ],
+      "severity": "critical",
+      "category": "annexes"
+    },
+    {
+      "id": "scc_annex_ii",
+      "name": "Annex II — Technical and Organisational Measures",
+      "article_reference": "SCC Annex II",
+      "description": "The data importer must describe the specific technical and organisational security measures implemented to protect personal data.",
+      "expected_provisions": [
+        "Technical measures described (encryption, pseudonymization, access controls)",
+        "Organisational measures described (personnel training, incident response, testing)",
+        "Measures appropriate to the risk of the processing"
+      ],
+      "severity": "high",
+      "category": "security"
+    },
+    {
+      "id": "scc_sub_processors",
+      "name": "Sub-Processor Authorization and Flow-Down",
+      "article_reference": "SCC Clause 9",
+      "description": "The data importer shall not sub-contract processing without prior specific or general written authorisation from the data exporter, and shall impose the same data protection obligations on the sub-processor.",
+      "expected_provisions": [
+        "Prior written authorization for sub-processing (specific or general with notification)",
+        "Sub-processor contract imposes same obligations as SCCs",
+        "List of sub-processors provided",
+        "Exporter's right to object to new sub-processors",
+        "Importer remains fully liable for sub-processor's obligations"
+      ],
+      "severity": "critical",
+      "category": "sub_processors"
+    },
+    {
+      "id": "scc_data_subject_rights",
+      "name": "Data Subject Rights and Redress",
+      "article_reference": "SCC Clause 10, Clause 11",
+      "description": "The data importer shall deal with enquiries and requests from data subjects and cooperate with the competent supervisory authority. Data subjects must be able to invoke the SCCs as third-party beneficiaries.",
+      "expected_provisions": [
+        "Data subjects can invoke SCCs as third-party beneficiaries",
+        "Importer deals promptly with data subject requests",
+        "Importer cooperates with supervisory authorities",
+        "Complaint handling process described"
+      ],
+      "severity": "high",
+      "category": "data_subject_rights"
+    },
+    {
+      "id": "scc_breach_notification",
+      "name": "Data Breach Notification",
+      "article_reference": "SCC Clause 8.6 (Module 2/3)",
+      "description": "In the event of a personal data breach, the data importer shall notify the data exporter without undue delay and take reasonable steps to mitigate the effects.",
+      "expected_provisions": [
+        "Notification of data breach without undue delay",
+        "Notification includes nature of breach, contact point, consequences, and mitigation measures",
+        "Importer cooperates with exporter to address the breach",
+        "Importer assists exporter in notifying supervisory authority and data subjects where required"
+      ],
+      "severity": "critical",
+      "category": "breach_notification"
+    },
+    {
+      "id": "scc_transfer_impact",
+      "name": "Transfer Impact Assessment",
+      "article_reference": "SCC Clause 14",
+      "description": "The parties must warrant that they have no reason to believe that the laws and practices of the destination country prevent the data importer from fulfilling its obligations under the SCCs, taking into account supplementary measures.",
+      "expected_provisions": [
+        "Transfer impact assessment conducted or referenced",
+        "Parties represent no reason to believe local laws prevent compliance",
+        "Relevant local laws and practices of destination country assessed",
+        "Supplementary measures identified and implemented where necessary"
+      ],
+      "severity": "critical",
+      "category": "transfer_assessment"
+    },
+    {
+      "id": "scc_governing_law",
+      "name": "Governing Law and Jurisdiction",
+      "article_reference": "SCC Clause 17, Clause 18",
+      "description": "The SCCs must specify the governing law (must be the law of an EU Member State) and the forum for dispute resolution.",
+      "expected_provisions": [
+        "Governing law specified (must be law of an EU Member State)",
+        "Forum for disputes specified (courts of an EU Member State)",
+        "Data subjects may bring proceedings in Member State of habitual residence"
+      ],
+      "severity": "high",
+      "category": "legal_framework"
+    },
+    {
+      "id": "scc_docking",
+      "name": "Docking Clause (Optional)",
+      "article_reference": "SCC Clause 7",
+      "description": "The optional docking clause allows additional parties to accede to the SCCs as data exporters or importers by completing and signing Annex I.A.",
+      "expected_provisions": [
+        "Docking clause included or excluded with clear statement",
+        "If included, process for additional parties to accede is described"
+      ],
+      "severity": "low",
+      "category": "structure"
+    }
+  ]
+}

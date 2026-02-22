@@ -1,0 +1,160 @@
+{
+  "framework_id": "gdpr_art28",
+  "framework_name": "GDPR Article 28 — Processor Obligations",
+  "version": "1.0",
+  "requirements": [
+    {
+      "id": "gdpr_28_1",
+      "name": "Sufficient Guarantees",
+      "article_reference": "GDPR Art. 28(1)",
+      "description": "Controller shall use only processors providing sufficient guarantees to implement appropriate technical and organisational measures so that processing meets GDPR requirements and ensures protection of data subject rights.",
+      "expected_provisions": [
+        "Processor represents it implements appropriate technical and organizational measures",
+        "Processor agrees to maintain compliance with applicable data protection laws",
+        "Controller retains right to verify processor's compliance"
+      ],
+      "severity": "critical",
+      "category": "processor_qualifications"
+    },
+    {
+      "id": "gdpr_28_2",
+      "name": "Sub-Processor Authorization",
+      "article_reference": "GDPR Art. 28(2)",
+      "description": "Processor shall not engage another processor without prior specific or general written authorisation of the controller. In the case of general written authorisation, the processor shall inform the controller of any intended changes concerning the addition or replacement of sub-processors, thereby giving the controller the opportunity to object.",
+      "expected_provisions": [
+        "Prior written consent required for engaging sub-processors (specific or general authorization)",
+        "Notification mechanism for new or replacement sub-processors",
+        "Controller has right to object to new sub-processors",
+        "Reasonable objection period specified (e.g., 30 days)",
+        "List of current sub-processors provided or referenced"
+      ],
+      "severity": "critical",
+      "category": "sub_processors"
+    },
+    {
+      "id": "gdpr_28_3a",
+      "name": "Processing on Documented Instructions",
+      "article_reference": "GDPR Art. 28(3)(a)",
+      "description": "Processor shall process personal data only on documented instructions from the controller, including with regard to transfers of personal data to a third country or an international organisation, unless required to do so by Union or Member State law.",
+      "expected_provisions": [
+        "Processor processes data only on documented instructions from controller",
+        "Processor shall inform controller if it believes an instruction infringes data protection law",
+        "Processing instructions documented in an annex or schedule",
+        "Transfer instructions include applicable safeguards"
+      ],
+      "severity": "critical",
+      "category": "processing_instructions"
+    },
+    {
+      "id": "gdpr_28_3b",
+      "name": "Confidentiality Obligations",
+      "article_reference": "GDPR Art. 28(3)(b)",
+      "description": "Processor shall ensure that persons authorised to process the personal data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality.",
+      "expected_provisions": [
+        "All personnel with access to personal data bound by confidentiality obligations",
+        "Confidentiality obligations survive termination of employment or engagement",
+        "Training on data protection obligations provided to authorized personnel"
+      ],
+      "severity": "high",
+      "category": "confidentiality"
+    },
+    {
+      "id": "gdpr_28_3c",
+      "name": "Security of Processing",
+      "article_reference": "GDPR Art. 28(3)(c), Art. 32",
+      "description": "Processor shall take all measures required pursuant to Article 32, including appropriate technical and organisational measures to ensure a level of security appropriate to the risk.",
+      "expected_provisions": [
+        "Processor implements appropriate technical and organizational security measures",
+        "Security measures described or referenced in annex/schedule",
+        "Measures address pseudonymization, encryption, confidentiality, integrity, availability, resilience",
+        "Regular testing and evaluation of security measures"
+      ],
+      "severity": "critical",
+      "category": "security"
+    },
+    {
+      "id": "gdpr_28_3d",
+      "name": "Sub-Processor Flow-Down",
+      "article_reference": "GDPR Art. 28(3)(d), Art. 28(4)",
+      "description": "Where a processor engages another processor, the same data protection obligations as set out in the contract between the controller and processor shall be imposed on the sub-processor by way of a contract.",
+      "expected_provisions": [
+        "Same data protection obligations imposed on sub-processors via written contract",
+        "Processor remains fully liable for sub-processor's performance",
+        "Sub-processor contracts require equivalent security and confidentiality measures"
+      ],
+      "severity": "critical",
+      "category": "sub_processors"
+    },
+    {
+      "id": "gdpr_28_3e",
+      "name": "Assistance with Data Subject Rights",
+      "article_reference": "GDPR Art. 28(3)(e)",
+      "description": "Processor shall assist the controller by appropriate technical and organisational measures, insofar as possible, for fulfilment of the controller's obligation to respond to requests for exercising data subject rights under Chapter III.",
+      "expected_provisions": [
+        "Processor assists controller with data subject access, rectification, erasure, and portability requests",
+        "Processor notifies controller promptly of data subject requests received",
+        "Appropriate technical measures in place to support data subject rights"
+      ],
+      "severity": "high",
+      "category": "data_subject_rights"
+    },
+    {
+      "id": "gdpr_28_3f",
+      "name": "Assistance with Security and Breach Obligations",
+      "article_reference": "GDPR Art. 28(3)(f), Art. 32–36",
+      "description": "Processor shall assist the controller in ensuring compliance with obligations under Articles 32 to 36 (security, breach notification, DPIAs, and prior consultation), taking into account the nature of processing and information available to the processor.",
+      "expected_provisions": [
+        "Processor notifies controller of personal data breaches without undue delay",
+        "Specific breach notification timeframe stated (e.g., within 24–72 hours)",
+        "Breach notification includes nature of breach, categories of data, likely consequences, and remedial measures",
+        "Processor assists controller with data protection impact assessments upon request",
+        "Processor assists with prior consultation with supervisory authorities"
+      ],
+      "severity": "critical",
+      "category": "breach_notification"
+    },
+    {
+      "id": "gdpr_28_3g",
+      "name": "Deletion or Return of Data",
+      "article_reference": "GDPR Art. 28(3)(g)",
+      "description": "At the choice of the controller, processor shall delete or return all personal data after the end of the provision of services, and delete existing copies unless Union or Member State law requires storage.",
+      "expected_provisions": [
+        "Upon termination, processor shall delete or return all personal data at controller's choice",
+        "Processor certifies deletion upon request",
+        "Deletion of all existing copies unless legally required to retain",
+        "Specific timeframe for deletion or return stated"
+      ],
+      "severity": "high",
+      "category": "data_lifecycle"
+    },
+    {
+      "id": "gdpr_28_3h",
+      "name": "Audit Rights",
+      "article_reference": "GDPR Art. 28(3)(h)",
+      "description": "Processor shall make available to the controller all information necessary to demonstrate compliance with Article 28 obligations and allow for and contribute to audits, including inspections, conducted by the controller or another auditor mandated by the controller.",
+      "expected_provisions": [
+        "Controller has right to audit processor's compliance with the DPA",
+        "Processor provides information to demonstrate compliance upon request",
+        "Processor permits on-site inspections by controller or designated third-party auditor",
+        "Reasonable notice period for audits specified",
+        "Processor shall immediately inform controller if an instruction infringes applicable law"
+      ],
+      "severity": "high",
+      "category": "audit_rights"
+    },
+    {
+      "id": "gdpr_28_transfer",
+      "name": "International Data Transfers",
+      "article_reference": "GDPR Art. 28(3)(a), Chapter V (Art. 44–49)",
+      "description": "Transfers of personal data to third countries or international organisations must be on the basis of an adequacy decision, appropriate safeguards (SCCs, BCRs), or a derogation under Article 49.",
+      "expected_provisions": [
+        "Transfer mechanism identified (adequacy decision, SCCs, BCRs, or Art. 49 derogation)",
+        "Countries where personal data is processed are listed or referenced",
+        "Transfer impact assessment conducted or referenced",
+        "Supplementary measures documented where required (per Schrems II)"
+      ],
+      "severity": "critical",
+      "category": "data_transfers"
+    }
+  ]
+}

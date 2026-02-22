@@ -1,0 +1,114 @@
+{
+  "framework_id": "state_privacy",
+  "framework_name": "US State Privacy Laws — Processor/Service Provider Obligations",
+  "version": "1.0",
+  "requirements": [
+    {
+      "id": "state_written_contract",
+      "name": "Written Processor Contract",
+      "article_reference": "VCDPA § 59.1-578(B), CPA § 6-1-1305(2), CTDPA § 42-520(b)",
+      "description": "A processor must be bound by a contract with the controller that clearly sets forth instructions for processing data, the nature and purpose of processing, the type of data subject to processing, the duration of processing, and the rights and obligations of both parties.",
+      "expected_provisions": [
+        "Written contract between controller and processor executed",
+        "Instructions for processing personal data clearly stated",
+        "Nature and purpose of processing described",
+        "Type of personal data subject to processing identified",
+        "Duration of processing specified",
+        "Rights and obligations of both parties set forth"
+      ],
+      "severity": "critical",
+      "category": "contract_requirements"
+    },
+    {
+      "id": "state_duty_of_confidentiality",
+      "name": "Duty of Confidentiality",
+      "article_reference": "VCDPA § 59.1-578(B)(1), CPA § 6-1-1305(2)(a)",
+      "description": "The processor must ensure that each person processing the data is subject to a duty of confidentiality with respect to the data.",
+      "expected_provisions": [
+        "Personnel processing personal data are bound by confidentiality obligations",
+        "Confidentiality obligations cover all individuals with access to personal data"
+      ],
+      "severity": "high",
+      "category": "confidentiality"
+    },
+    {
+      "id": "state_deletion_return",
+      "name": "Deletion or Return of Personal Data",
+      "article_reference": "VCDPA § 59.1-578(B)(2), CPA § 6-1-1305(2)(b), CTDPA § 42-520(b)(2)",
+      "description": "At the direction of the controller, the processor shall delete or return all personal data at the end of the provision of services, unless retention is required by law.",
+      "expected_provisions": [
+        "Personal data deleted or returned at controller's direction upon termination",
+        "Processor deletes existing copies unless retention required by law",
+        "Reasonable timeframe for deletion or return specified"
+      ],
+      "severity": "high",
+      "category": "data_lifecycle"
+    },
+    {
+      "id": "state_demonstration",
+      "name": "Demonstration of Compliance / Audit Rights",
+      "article_reference": "VCDPA § 59.1-578(B)(3), CPA § 6-1-1305(2)(c), CTDPA § 42-520(b)(3)",
+      "description": "The processor must make available to the controller, upon request, all information in its possession necessary to demonstrate the processor's compliance with its obligations. The processor shall allow and cooperate with reasonable assessments by the controller or the controller's designated assessor.",
+      "expected_provisions": [
+        "Processor provides information to demonstrate compliance upon request",
+        "Processor allows reasonable assessments or audits by controller",
+        "Controller may use designated third-party assessor",
+        "Reasonable notice period for assessments"
+      ],
+      "severity": "high",
+      "category": "audit_rights"
+    },
+    {
+      "id": "state_subcontractor",
+      "name": "Subcontractor Obligations",
+      "article_reference": "VCDPA § 59.1-578(B)(4), CPA § 6-1-1305(2)(d), CTDPA § 42-520(b)(4)",
+      "description": "The processor shall engage any subcontractor pursuant to a written contract that requires the subcontractor to meet the obligations of the processor with respect to the personal data.",
+      "expected_provisions": [
+        "Subcontractors engaged under written contract with equivalent obligations",
+        "Controller notified of material subcontractor changes",
+        "Processor remains responsible for subcontractor compliance"
+      ],
+      "severity": "high",
+      "category": "subcontractors"
+    },
+    {
+      "id": "state_dpia_cooperation",
+      "name": "Data Protection Assessment Cooperation",
+      "article_reference": "VCDPA § 59.1-580, CPA § 6-1-1309, CTDPA § 42-523",
+      "description": "Processors must cooperate with controllers to conduct data protection assessments when required for processing that presents a heightened risk of harm to consumers.",
+      "expected_provisions": [
+        "Processor cooperates with controller on data protection assessments",
+        "Processor provides information necessary for assessments"
+      ],
+      "severity": "medium",
+      "category": "assessments"
+    },
+    {
+      "id": "state_consumer_rights",
+      "name": "Assistance with Consumer Rights Requests",
+      "article_reference": "VCDPA § 59.1-577, CPA § 6-1-1306, CTDPA § 42-519",
+      "description": "Processors must assist controllers in fulfilling consumer rights requests including the right to access, correct, delete, and obtain a copy of personal data, and the right to opt out of targeted advertising, sale of personal data, or profiling.",
+      "expected_provisions": [
+        "Processor assists controller in responding to consumer rights requests",
+        "Support for access, correction, and deletion requests",
+        "Support for opt-out of sale, targeted advertising, and profiling",
+        "Timely assistance provided within legally required response periods"
+      ],
+      "severity": "high",
+      "category": "consumer_rights"
+    },
+    {
+      "id": "state_security",
+      "name": "Data Security Obligations",
+      "article_reference": "VCDPA § 59.1-578(A)(3), CPA § 6-1-1305(4), CTDPA § 42-520(a)(3)",
+      "description": "Processors must implement appropriate technical and organizational security measures to protect personal data, appropriate to the volume, scope, and nature of the personal data processed.",
+      "expected_provisions": [
+        "Appropriate technical and organizational security measures implemented",
+        "Security measures appropriate to volume, scope, and nature of data",
+        "Breach notification to controller required in event of security incident"
+      ],
+      "severity": "critical",
+      "category": "security"
+    }
+  ]
+}

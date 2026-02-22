@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DPA_ANTHROPIC_API_KEY=${DPA_ANTHROPIC_API_KEY:-}
+
+  frontend:
+    build: .
+    command: streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true
+    ports:
+      - "8501:8501"
+    environment:
+      - DPA_API_URL=http://api:8000/api
+    depends_on:
+      - api

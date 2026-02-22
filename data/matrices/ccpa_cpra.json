@@ -1,0 +1,112 @@
+{
+  "framework_id": "ccpa_cpra",
+  "framework_name": "CCPA/CPRA — Service Provider & Contractor Obligations",
+  "version": "1.0",
+  "requirements": [
+    {
+      "id": "ccpa_sp_contract",
+      "name": "Written Service Provider Contract",
+      "article_reference": "Cal. Civ. Code § 1798.100(d), § 1798.140(ag)",
+      "description": "A service provider or contractor must be bound by a written contract that prohibits the entity receiving personal information from retaining, using, or disclosing the personal information for any purpose other than the business purposes specified in the contract.",
+      "expected_provisions": [
+        "Written contract specifies business purposes for which personal information is disclosed",
+        "Contract prohibits retention, use, or disclosure of personal information outside the specified business purposes",
+        "Contract prohibits combining personal information with information from other sources except as permitted"
+      ],
+      "severity": "critical",
+      "category": "contract_requirements"
+    },
+    {
+      "id": "ccpa_no_sell_share",
+      "name": "Prohibition on Selling or Sharing",
+      "article_reference": "Cal. Civ. Code § 1798.100(d)(1)",
+      "description": "Service provider or contractor shall not sell or share the personal information received from the business.",
+      "expected_provisions": [
+        "Explicit prohibition on selling personal information",
+        "Explicit prohibition on sharing personal information for cross-context behavioral advertising",
+        "Commitment not to use personal information for purposes beyond the services provided"
+      ],
+      "severity": "critical",
+      "category": "use_restrictions"
+    },
+    {
+      "id": "ccpa_compliance_notification",
+      "name": "Compliance Notification and Cooperation",
+      "article_reference": "Cal. Civ. Code § 1798.100(d)(3)",
+      "description": "Service provider or contractor shall notify the business if it determines it can no longer meet its obligations under the CCPA and shall provide the business the right to take reasonable and appropriate steps to stop and remediate unauthorized use.",
+      "expected_provisions": [
+        "Service provider notifies business if it can no longer meet CCPA obligations",
+        "Business has right to take steps to stop and remediate unauthorized use",
+        "Service provider cooperates with business to ensure CCPA compliance"
+      ],
+      "severity": "high",
+      "category": "compliance"
+    },
+    {
+      "id": "ccpa_opt_out",
+      "name": "Consumer Opt-Out Honoring",
+      "article_reference": "Cal. Civ. Code § 1798.135, § 1798.120",
+      "description": "Service provider must honor consumer opt-out requests communicated by the business and must not use personal information that the business has disclosed is subject to an opt-out request.",
+      "expected_provisions": [
+        "Service provider honors consumer opt-out signals communicated by business",
+        "Process for business to communicate consumer opt-out requests to service provider",
+        "Service provider does not use opt-out personal information for purposes other than contracted services"
+      ],
+      "severity": "high",
+      "category": "consumer_rights"
+    },
+    {
+      "id": "ccpa_subcontractor",
+      "name": "Subcontractor Flow-Down",
+      "article_reference": "Cal. Civ. Code § 1798.100(d)(5)",
+      "description": "If the service provider engages a subcontractor, it shall require the subcontractor to agree to the same restrictions and obligations imposed on the service provider by contract.",
+      "expected_provisions": [
+        "Subcontractor engaged only with equivalent contractual obligations",
+        "Service provider remains responsible for subcontractor compliance",
+        "Business notified of material subcontractor changes"
+      ],
+      "severity": "high",
+      "category": "subcontractors"
+    },
+    {
+      "id": "ccpa_consumer_requests",
+      "name": "Assistance with Consumer Requests",
+      "article_reference": "Cal. Civ. Code § 1798.100(d)(4), § 1798.105, § 1798.106",
+      "description": "Service provider shall assist the business in responding to consumer requests to know, delete, correct, and port personal information, and to opt out of the sale or sharing of personal information.",
+      "expected_provisions": [
+        "Service provider assists business in responding to consumer access requests",
+        "Service provider deletes personal information upon business instruction per consumer request",
+        "Service provider assists with correction of inaccurate personal information",
+        "Reasonable timeframe for responding to consumer request assistance"
+      ],
+      "severity": "high",
+      "category": "consumer_rights"
+    },
+    {
+      "id": "ccpa_security",
+      "name": "Reasonable Security Measures",
+      "article_reference": "Cal. Civ. Code § 1798.100(e), § 1798.150",
+      "description": "Businesses and service providers must implement and maintain reasonable security procedures and practices appropriate to the nature of the personal information to protect it from unauthorized or illegal access, destruction, use, modification, or disclosure.",
+      "expected_provisions": [
+        "Reasonable security procedures and practices implemented",
+        "Security measures appropriate to the nature of the personal information",
+        "Protection against unauthorized access, destruction, use, modification, or disclosure"
+      ],
+      "severity": "critical",
+      "category": "security"
+    },
+    {
+      "id": "ccpa_deidentification",
+      "name": "De-identification Requirements",
+      "article_reference": "Cal. Civ. Code § 1798.140(m)",
+      "description": "If personal information is de-identified, the business or service provider must implement technical safeguards, business processes that prevent re-identification, and publicly commit to maintaining de-identification.",
+      "expected_provisions": [
+        "Technical safeguards preventing re-identification",
+        "Business processes in place to prevent re-identification",
+        "Contractual commitment not to attempt re-identification of de-identified data"
+      ],
+      "severity": "medium",
+      "category": "data_handling"
+    }
+  ]
+}

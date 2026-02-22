@@ -1,0 +1,6 @@
+{
+  "_comment": "Example: upload a DPA and analyze against GDPR Art 28 and CCPA matrices",
+  "_curl_example": "curl -X POST http://localhost:8000/api/analyses/ -H 'x-api-key: YOUR_KEY' -F 'file=@data/sample/sample_dpa.docx' -G -d 'matrix_ids=1,2'",
+  "matrix_ids": [1, 2],
+  "model": "claude-sonnet-4-20250514"
+}
