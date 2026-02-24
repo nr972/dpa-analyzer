@@ -79,7 +79,7 @@ dpa-analyzer/
 
 - **No real data.** All sample data must be synthetic. Never commit real DPAs, company names, client data, or internal policies.
 - **Generic framework.** Keep the public codebase company-agnostic. Company-specific requirements matrices stay out of the repo.
-- **MIT License.**
+- **MIT License.** The copyright line in the LICENSE file must read: `Copyright (c) 2026 Noam Raz and Pleasant Secret Labs`.
 - **SQLite for now.** Use SQLAlchemy so the DB layer is swappable to PostgreSQL later.
 - **API-first architecture.** FastAPI handles all logic. Streamlit is a thin HTTP client.
 - **Environment variables for secrets.** Anthropic API key via `.env` file, never hardcoded. Prefix env vars with `DPA_`.
