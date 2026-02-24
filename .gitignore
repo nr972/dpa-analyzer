@@ -1,5 +1,6 @@
 # Project context (not for public repo)
 PROJECT.md
+PORTFOLIO_STANDARDS.md
 
 # Environment variables / secrets
 .env
