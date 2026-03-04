@@ -4,7 +4,7 @@ from datetime import UTC, datetime
 
 import pytest
 
-from app.models.analysis import (
+from dpa_app.models.analysis import (
     AnalysisFinding,
     AnalysisStatus,
     DPAAnalysis,
@@ -12,7 +12,7 @@ from app.models.analysis import (
     FindingType,
     RequirementsMatrix,
 )
-from app.services.reporter import generate_report
+from dpa_app.services.reporter import generate_report
 
 
 @pytest.fixture()
@@ -85,7 +85,7 @@ def sample_matrix(db) -> RequirementsMatrix:
 
 class TestReportGeneration:
     def test_json_report(self, db, tmp_path, monkeypatch, sample_analysis, sample_findings, sample_matrix):
-        from app import config
+        from dpa_app import config
         monkeypatch.setattr(config.settings, "reports_dir", tmp_path)
 
         path = generate_report(sample_analysis, sample_findings, [sample_matrix], "json")
@@ -99,7 +99,7 @@ class TestReportGeneration:
         assert len(data["remediation_checklist"]) == 1
 
     def test_html_report(self, db, tmp_path, monkeypatch, sample_analysis, sample_findings, sample_matrix):
-        from app import config
+        from dpa_app import config
         monkeypatch.setattr(config.settings, "reports_dir", tmp_path)
 
         path = generate_report(sample_analysis, sample_findings, [sample_matrix], "html")
@@ -112,7 +112,7 @@ class TestReportGeneration:
         assert "Processing Instructions" in content
 
     def test_docx_report(self, db, tmp_path, monkeypatch, sample_analysis, sample_findings, sample_matrix):
-        from app import config
+        from dpa_app import config
         monkeypatch.setattr(config.settings, "reports_dir", tmp_path)
 
         path = generate_report(sample_analysis, sample_findings, [sample_matrix], "docx")
@@ -121,7 +121,7 @@ class TestReportGeneration:
         assert path.stat().st_size > 0
 
     def test_pdf_report(self, db, tmp_path, monkeypatch, sample_analysis, sample_findings, sample_matrix):
-        from app import config
+        from dpa_app import config
         monkeypatch.setattr(config.settings, "reports_dir", tmp_path)
 
         path = generate_report(sample_analysis, sample_findings, [sample_matrix], "pdf")

@@ -4,7 +4,7 @@ set -e
 mkdir -p data/uploads data/reports data/matrices
 
 # Start API in background
-uvicorn app.main:app --host 0.0.0.0 --port "${API_PORT:-8000}" &
+uvicorn dpa_app.main:app --host 0.0.0.0 --port "${API_PORT:-8000}" &
 
 # Wait for API
 for i in $(seq 1 30); do
@@ -15,7 +15,7 @@ for i in $(seq 1 30); do
 done
 
 # Start Streamlit in foreground
-streamlit run frontend/app.py \
+streamlit run dpa_frontend/app.py \
     --server.port "${PORT:-8501}" \
     --server.address 0.0.0.0 \
     --server.headless true

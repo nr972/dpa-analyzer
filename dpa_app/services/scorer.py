@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from app.services.analyzer import FindingData
+from dpa_app.services.analyzer import FindingData
 
 
 @dataclass

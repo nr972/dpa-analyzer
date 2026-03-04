@@ -8,15 +8,15 @@ from fastapi import APIRouter, Header, Query, UploadFile
 from fastapi.responses import FileResponse
 from sqlalchemy import func, select
 
-from app.database import DbDep
-from app.models.analysis import (
+from dpa_app.database import DbDep
+from dpa_app.models.analysis import (
     AnalysisFinding,
     AnalysisStatus,
     DPAAnalysis,
     FindingSeverity,
     FindingType,
 )
-from app.schemas.analysis import (
+from dpa_app.schemas.analysis import (
     AnalysisDetailResponse,
     AnalysisListResponse,
     AnalysisResponse,
@@ -24,9 +24,9 @@ from app.schemas.analysis import (
     FindingsListResponse,
     FindingsSummary,
 )
-from app.schemas.matrix import MatrixSummaryResponse
-from app.services import analysis_service
-from app.services.reporter import generate_report
+from dpa_app.schemas.matrix import MatrixSummaryResponse
+from dpa_app.services import analysis_service
+from dpa_app.services.reporter import generate_report
 
 router = APIRouter()
 

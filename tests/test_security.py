@@ -4,8 +4,8 @@ import io
 
 import pytest
 
-from app.services.analysis_service import validate_upload, save_upload
-from app.config import settings
+from dpa_app.services.analysis_service import validate_upload, save_upload
+from dpa_app.config import settings
 
 
 class TestFileValidation:
@@ -49,7 +49,7 @@ class TestFileValidation:
 
 class TestFileSave:
     def test_uuid_filename(self, tmp_path, monkeypatch):
-        from app import config
+        from dpa_app import config
         monkeypatch.setattr(config.settings, "uploads_dir", tmp_path)
 
         from starlette.datastructures import UploadFile as StarletteUpload
@@ -70,7 +70,7 @@ class TestFileSave:
         assert file_path.exists()
 
     def test_file_size_limit(self, tmp_path, monkeypatch):
-        from app import config
+        from dpa_app import config
         monkeypatch.setattr(config.settings, "uploads_dir", tmp_path)
         monkeypatch.setattr(config.settings, "max_file_size_mb", 0)  # 0 MB = reject everything
 

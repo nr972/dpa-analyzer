@@ -9,8 +9,8 @@ from dataclasses import dataclass
 
 from anthropic import Anthropic, APIError, AuthenticationError, RateLimitError
 
-from app.schemas.matrix import MatrixContent, RequirementItem
-from app.services.parser import Clause
+from dpa_app.schemas.matrix import MatrixContent, RequirementItem
+from dpa_app.services.parser import Clause
 
 logger = logging.getLogger(__name__)
 

@@ -10,8 +10,8 @@ from pathlib import Path
 from fastapi import HTTPException, UploadFile
 from sqlalchemy.orm import Session
 
-from app.config import settings
-from app.models.analysis import (
+from dpa_app.config import settings
+from dpa_app.models.analysis import (
     AnalysisFinding,
     AnalysisStatus,
     DPAAnalysis,
@@ -19,10 +19,10 @@ from app.models.analysis import (
     FindingType,
     RequirementsMatrix,
 )
-from app.schemas.matrix import MatrixContent
-from app.services.analyzer import analyze_dpa
-from app.services.parser import parse_document
-from app.services.scorer import calculate_scores
+from dpa_app.schemas.matrix import MatrixContent
+from dpa_app.services.analyzer import analyze_dpa
+from dpa_app.services.parser import parse_document
+from dpa_app.services.scorer import calculate_scores
 
 logger = logging.getLogger(__name__)
 

@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from app.services.parser import (
+from dpa_app.services.parser import (
     Clause,
     ParsedDocument,
     _is_likely_heading,

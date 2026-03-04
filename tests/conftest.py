@@ -5,8 +5,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from starlette.testclient import TestClient
 
-from app.database import Base, get_db
-from app.main import app
+from dpa_app.database import Base, get_db
+from dpa_app.main import app
 
 TEST_DATABASE_URL = "sqlite:///./test_dpa_analyzer.db"
 test_engine = create_engine(

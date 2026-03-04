@@ -47,7 +47,7 @@ mkdir -p data/uploads data/reports data/matrices
 
 # Start API server in background
 echo -e "${GREEN}Starting API server on port $API_PORT...${NC}"
-uvicorn app.main:app --host 0.0.0.0 --port "$API_PORT" &
+uvicorn dpa_app.main:app --host 0.0.0.0 --port "$API_PORT" &
 API_PID=$!
 
 # Wait for API to be ready
@@ -68,7 +68,7 @@ done
 echo -e "${GREEN}Starting frontend on port $FRONTEND_PORT...${NC}"
 echo -e "${GREEN}Open http://localhost:$FRONTEND_PORT in your browser.${NC}"
 echo ""
-streamlit run frontend/app.py \
+streamlit run dpa_frontend/app.py \
     --server.port "$FRONTEND_PORT" \
     --server.address 0.0.0.0 \
     --server.headless true

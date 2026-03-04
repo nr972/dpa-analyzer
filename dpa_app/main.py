@@ -6,11 +6,11 @@ from collections.abc import AsyncGenerator
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import analyses as analyses_router
-from app.api.routes import matrices as matrices_router
-from app.config import settings
-from app.database import Base, SessionLocal, engine
-from app.services.seed import seed_matrices
+from dpa_app.api.routes import analyses as analyses_router
+from dpa_app.api.routes import matrices as matrices_router
+from dpa_app.config import settings
+from dpa_app.database import Base, SessionLocal, engine
+from dpa_app.services.seed import seed_matrices
 
 
 @asynccontextmanager

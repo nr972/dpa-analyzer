@@ -77,10 +77,10 @@ export DPA_ANTHROPIC_API_KEY=sk-ant-...
 
 ```bash
 # Terminal 1: API
-uvicorn app.main:app --reload
+uvicorn dpa_app.main:app --reload
 
 # Terminal 2: Frontend
-streamlit run frontend/app.py
+streamlit run dpa_frontend/app.py
 ```
 
 Or just use `./start.sh` which handles both.
@@ -128,13 +128,13 @@ Upload these through the web UI or API to test immediately.
 
 ```
 dpa-analyzer/
-├── app/                      # FastAPI backend
+├── dpa_app/                  # FastAPI backend
 │   ├── api/routes/           # REST endpoints
 │   ├── models/               # SQLAlchemy models
 │   ├── schemas/              # Pydantic validation
 │   ├── services/             # Business logic
 │   └── templates/            # Report templates
-├── frontend/                 # Streamlit UI
+├── dpa_frontend/             # Streamlit UI
 ├── data/
 │   ├── matrices/             # Preset requirement matrices (JSON)
 │   └── sample/               # Sample DPAs for testing

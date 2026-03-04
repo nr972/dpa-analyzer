@@ -6,8 +6,8 @@ import logging
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.config import settings
-from app.models.analysis import RequirementsMatrix
+from dpa_app.config import settings
+from dpa_app.models.analysis import RequirementsMatrix
 
 logger = logging.getLogger(__name__)
 

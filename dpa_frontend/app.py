@@ -94,7 +94,7 @@ if page == "Settings":
     else:
         st.error(
             f"Cannot reach API at {API_URL}. Make sure the backend is running "
-            "(e.g., `uvicorn app.main:app --reload`)."
+            "(e.g., `uvicorn dpa_app.main:app --reload`)."
         )
 
 

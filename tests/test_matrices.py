@@ -4,8 +4,8 @@ import json
 
 import pytest
 
-from app.models.analysis import RequirementsMatrix
-from app.services.seed import seed_matrices
+from dpa_app.models.analysis import RequirementsMatrix
+from dpa_app.services.seed import seed_matrices
 
 
 SAMPLE_MATRIX_CONTENT = {
@@ -146,7 +146,7 @@ class TestMatrixSeeding:
     """Test preset matrix seeding from JSON files."""
 
     def test_seed_matrices(self, db, tmp_path, monkeypatch):
-        from app import config
+        from dpa_app import config
 
         monkeypatch.setattr(config.settings, "matrices_dir", tmp_path)
 
@@ -180,7 +180,7 @@ class TestMatrixSeeding:
         assert matrices[0].is_preset is True
 
     def test_seed_idempotent(self, db, tmp_path, monkeypatch):
-        from app import config
+        from dpa_app import config
 
         monkeypatch.setattr(config.settings, "matrices_dir", tmp_path)
 

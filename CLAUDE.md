@@ -19,7 +19,7 @@ Tool for reviewing Data Processing Agreements, privacy addenda, and data-related
 
 ```
 dpa-analyzer/
-├── app/                      # FastAPI backend
+├── dpa_app/                  # FastAPI backend
 │   ├── api/
 │   │   └── routes/
 │   │       ├── analyses.py   # Upload, analysis, results, report download
@@ -42,7 +42,7 @@ dpa-analyzer/
 │   ├── config.py             # pydantic-settings, DPA_ env prefix
 │   ├── database.py           # SQLAlchemy engine, session, Base, get_db
 │   └── main.py               # FastAPI app, lifespan, CORS, health check
-├── frontend/
+├── dpa_frontend/
 │   └── app.py                # Streamlit UI (4 pages)
 ├── data/
 │   ├── matrices/             # Preset requirement matrices (JSON)
@@ -101,10 +101,10 @@ dpa-analyzer/
 pip install -e ".[dev]"
 
 # Run FastAPI backend
-uvicorn app.main:app --reload
+uvicorn dpa_app.main:app --reload
 
 # Run Streamlit frontend
-streamlit run frontend/app.py
+streamlit run dpa_frontend/app.py
 
 # Run tests
 pytest

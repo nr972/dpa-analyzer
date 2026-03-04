@@ -27,7 +27,7 @@ if not exist "data\matrices" mkdir "data\matrices"
 
 REM Start API server in background
 echo Starting API server on port 8000...
-start /b uvicorn app.main:app --host 0.0.0.0 --port 8000
+start /b uvicorn dpa_app.main:app --host 0.0.0.0 --port 8000
 
 REM Wait for API
 echo Waiting for API to start...
@@ -36,4 +36,4 @@ timeout /t 5 /nobreak >nul
 REM Start Streamlit frontend
 echo Starting frontend on port 8501...
 echo Open http://localhost:8501 in your browser.
-streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true
+streamlit run dpa_frontend/app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true

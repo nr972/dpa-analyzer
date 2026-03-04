@@ -1,7 +1,7 @@
 """Tests for compliance scoring logic."""
 
-from app.services.analyzer import FindingData
-from app.services.scorer import calculate_scores
+from dpa_app.services.analyzer import FindingData
+from dpa_app.services.scorer import calculate_scores
 
 
 def _finding(

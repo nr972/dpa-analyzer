@@ -2,15 +2,15 @@
 
 from fastapi import APIRouter, Query
 
-from app.database import DbDep
-from app.schemas.matrix import (
+from dpa_app.database import DbDep
+from dpa_app.schemas.matrix import (
     MatrixCreate,
     MatrixListResponse,
     MatrixResponse,
     MatrixSummaryResponse,
     MatrixUpdate,
 )
-from app.services import matrix_service
+from dpa_app.services import matrix_service
 
 router = APIRouter()
 

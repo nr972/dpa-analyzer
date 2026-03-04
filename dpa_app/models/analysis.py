@@ -16,7 +16,7 @@ from sqlalchemy import (
 from sqlalchemy.dialects.sqlite import JSON
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.database import Base
+from dpa_app.database import Base
 
 
 # ---------------------------------------------------------------------------

@@ -7,8 +7,8 @@ import logging
 from datetime import UTC, datetime
 from pathlib import Path
 
-from app.config import settings
-from app.models.analysis import AnalysisFinding, DPAAnalysis, RequirementsMatrix
+from dpa_app.config import settings
+from dpa_app.models.analysis import AnalysisFinding, DPAAnalysis, RequirementsMatrix
 
 logger = logging.getLogger(__name__)
 

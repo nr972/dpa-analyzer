@@ -7,7 +7,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from app.models.analysis import (
+from dpa_app.models.analysis import (
     AnalysisFinding,
     AnalysisStatus,
     DPAAnalysis,
@@ -151,7 +151,7 @@ class TestGetFindings:
 
 class TestDownloadReport:
     def test_json_report(self, client, completed_analysis, tmp_path, monkeypatch):
-        from app import config
+        from dpa_app import config
         monkeypatch.setattr(config.settings, "reports_dir", tmp_path)
 
         resp = client.get(
@@ -162,7 +162,7 @@ class TestDownloadReport:
         assert "application/json" in resp.headers["content-type"]
 
     def test_html_report(self, client, completed_analysis, tmp_path, monkeypatch):
-        from app import config
+        from dpa_app import config
         monkeypatch.setattr(config.settings, "reports_dir", tmp_path)
 
         resp = client.get(

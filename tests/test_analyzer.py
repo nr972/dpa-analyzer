@@ -5,8 +5,8 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from app.schemas.matrix import MatrixContent, RequirementItem
-from app.services.analyzer import (
+from dpa_app.schemas.matrix import MatrixContent, RequirementItem
+from dpa_app.services.analyzer import (
     FindingData,
     _batch_requirements,
     _build_user_prompt,
@@ -14,7 +14,7 @@ from app.services.analyzer import (
     _prepare_document_text,
     analyze_dpa,
 )
-from app.services.parser import Clause
+from dpa_app.services.parser import Clause
 
 
 # ---------------------------------------------------------------------------
@@ -209,7 +209,7 @@ class TestParseLLMResponse:
 
 
 class TestAnalyzeDPA:
-    @patch("app.services.analyzer.Anthropic")
+    @patch("dpa_app.services.analyzer.Anthropic")
     def test_full_analysis_flow(
         self, mock_anthropic_cls, sample_clauses, sample_matrix
     ):

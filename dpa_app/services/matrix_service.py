@@ -4,8 +4,8 @@ from fastapi import HTTPException
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from app.models.analysis import RequirementsMatrix
-from app.schemas.matrix import MatrixCreate, MatrixUpdate
+from dpa_app.models.analysis import RequirementsMatrix
+from dpa_app.schemas.matrix import MatrixCreate, MatrixUpdate
 
 
 def create_matrix(db: Session, data: MatrixCreate) -> RequirementsMatrix:

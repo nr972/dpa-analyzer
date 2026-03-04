@@ -4,8 +4,8 @@ from datetime import datetime
 
 from pydantic import BaseModel
 
-from app.models.analysis import AnalysisStatus, FindingSeverity, FindingType
-from app.schemas.matrix import MatrixSummaryResponse
+from dpa_app.models.analysis import AnalysisStatus, FindingSeverity, FindingType
+from dpa_app.schemas.matrix import MatrixSummaryResponse
 
 
 class FindingResponse(BaseModel):
