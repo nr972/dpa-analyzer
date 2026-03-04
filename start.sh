@@ -19,9 +19,7 @@ API_PID=""
 cleanup() {
     echo ""
     echo -e "${YELLOW}Shutting down...${NC}"
-    if [ -n "$API_PID" ]; then
-        kill "$API_PID" 2>/dev/null || true
-    fi
+    kill -- -$$ 2>/dev/null || true
     exit 0
 }
 trap cleanup INT TERM

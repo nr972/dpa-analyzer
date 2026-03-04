@@ -56,3 +56,17 @@ app.include_router(analyses_router.router, prefix="/api/analyses", tags=["analys
 @app.get("/health")
 def health_check() -> dict[str, str]:
     return {"status": "ok"}
+
+
+@app.post("/api/shutdown")
+def shutdown() -> dict[str, str]:
+    """Initiate graceful shutdown of the application."""
+    import os
+    import signal
+    import threading
+
+    def _shutdown() -> None:
+        os.killpg(os.getpgid(os.getpid()), signal.SIGTERM)
+
+    threading.Timer(1.5, _shutdown).start()
+    return {"status": "shutting_down"}

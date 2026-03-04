@@ -31,6 +31,51 @@ page = st.sidebar.radio(
     ["Upload & Analyze", "Analysis Results", "Requirements Matrices", "Settings"],
 )
 
+# ---------------------------------------------------------------------------
+# Sidebar shutdown button
+# ---------------------------------------------------------------------------
+
+if "confirm_shutdown" not in st.session_state:
+    st.session_state["confirm_shutdown"] = False
+
+st.sidebar.divider()
+
+if not st.session_state["confirm_shutdown"]:
+    if st.sidebar.button("Shutdown App"):
+        st.session_state["confirm_shutdown"] = True
+        st.rerun()
+else:
+    st.sidebar.warning("Are you sure?")
+    col_yes, col_no = st.sidebar.columns(2)
+    with col_yes:
+        if st.button("Yes, shut down"):
+            try:
+                requests.post(
+                    f"{API_URL.rstrip('/api')}/api/shutdown", timeout=5
+                )
+            except Exception:
+                pass
+            st.markdown(
+                """<script>
+document.documentElement.innerHTML = `
+<html><head><style>
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+         display: flex; justify-content: center; align-items: center;
+         height: 100vh; margin: 0; background: #f8f9fa; color: #333; }
+</style></head>
+<body><div style="text-align:center">
+  <h2>App has been shut down.</h2>
+  <p>You can close this tab.</p>
+</div></body></html>`;
+</script>""",
+                unsafe_allow_html=True,
+            )
+            st.stop()
+    with col_no:
+        if st.button("Cancel"):
+            st.session_state["confirm_shutdown"] = False
+            st.rerun()
+
 
 def _api_headers() -> dict[str, str]:
     """Build request headers with API key if available."""
